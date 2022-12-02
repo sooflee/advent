@@ -7,13 +7,13 @@ import (
 	"github.com/sooflee/advent/internal"
 )
 
-type day01InputStruct struct {
+type day01 struct {
 	lines []string
 }
 
 func Day01(part int, file string) int {
 
-	in := day01InputStruct{
+	in := day01{
 		lines: internal.Read(file),
 	}
 
@@ -28,7 +28,7 @@ func Day01(part int, file string) int {
 
 }
 
-func (input day01InputStruct) part_one() int {
+func (input day01) part_one() int {
 	current_largest := -1
 	current_value := 0
 
@@ -47,7 +47,7 @@ func (input day01InputStruct) part_one() int {
 	return current_largest
 }
 
-func (input day01InputStruct) part_two() int {
+func (input day01) part_two() int {
 	pq := &internal.IntHeap{}
 	heap.Init(pq)
 

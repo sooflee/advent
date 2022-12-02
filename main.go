@@ -8,9 +8,6 @@ import (
 	"github.com/sooflee/advent/problems"
 )
 
-// args := flag.Args()
-// file := args[0]
-
 func main() {
 
 	day := flag.Int("day", 1, "day value, default 1")

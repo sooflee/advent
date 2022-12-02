@@ -4,13 +4,13 @@ import (
 	"github.com/sooflee/advent/internal"
 )
 
-type day03InputStruct struct {
+type day03 struct {
 	lines []string
 }
 
 func Day03(part int, file string) int {
 
-	in := day03InputStruct{
+	in := day03{
 		lines: internal.Read(file),
 	}
 
@@ -25,10 +25,10 @@ func Day03(part int, file string) int {
 
 }
 
-func (input day03InputStruct) part_one() int {
+func (input day03) part_one() int {
 	return 0
 }
 
-func (input day03InputStruct) part_two() int {
+func (input day03) part_two() int {
 	return 0
 }

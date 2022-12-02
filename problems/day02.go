@@ -4,13 +4,13 @@ import (
 	"github.com/sooflee/advent/internal"
 )
 
-type day02InputStruct struct {
+type day02 struct {
 	lines []string
 }
 
 func Day02(part int, file string) int {
 
-	in := day02InputStruct{
+	in := day02{
 		lines: internal.Read(file),
 	}
 
@@ -25,7 +25,7 @@ func Day02(part int, file string) int {
 
 }
 
-func (input day02InputStruct) part_one() int {
+func (input day02) part_one() int {
 
 	total_score := 0
 
@@ -58,7 +58,7 @@ func (input day02InputStruct) part_one() int {
 	return total_score
 }
 
-func (input day02InputStruct) part_two() int {
+func (input day02) part_two() int {
 
 	total_score := 0
 

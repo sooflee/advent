@@ -14,7 +14,7 @@ func Test_Day03(t *testing.T) {
 	}{}
 
 	for _, test := range test_cases {
-		in := day03InputStruct{
+		in := day03{
 			lines: test.input,
 		}
 		assert.Equal(t, test.part_one_assert, in.part_one())
