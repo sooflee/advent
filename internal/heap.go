@@ -1,4 +1,6 @@
-package problems
+package internal
+
+// Stole this minHeap implementation
 
 type IntHeap []int
 
@@ -13,8 +15,6 @@ func (h IntHeap) Swap(i, j int) {
 }
 
 func (h *IntHeap) Push(x interface{}) {
-	// Push and Pop use pointer receivers because they modify the slice's length,
-	// not just its contents.
 	*h = append(*h, x.(int))
 }
 

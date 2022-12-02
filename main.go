@@ -4,6 +4,7 @@ import (
 	"flag"
 	"fmt"
 
+	"github.com/sooflee/advent/internal"
 	"github.com/sooflee/advent/problems"
 )
 
@@ -16,7 +17,7 @@ func main() {
 	part := flag.Int("part", 1, "a part value, default 1")
 	flag.Parse()
 
-	answer, _ := problems.Call(problems.Dailies, problems.GetFunc(*day), *part, "problems/"+problems.GetFile(*day))
+	answer, _ := internal.Call(problems.Dailies, internal.GetFunc(*day), *part, "problems/"+internal.GetFile(*day))
 	fmt.Println(answer[0])
 
 }
