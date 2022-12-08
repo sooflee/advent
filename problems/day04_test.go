@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func Test_Day03(t *testing.T) {
+func Test_Day04(t *testing.T) {
 	test_cases := []struct {
 		input           []string
 		part_one_assert int
@@ -14,20 +14,20 @@ func Test_Day03(t *testing.T) {
 	}{
 		{
 			input: []string{
-				"vJrwpWtwJgWrhcsFMMfFFhFp",
-				"jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL",
-				"PmmdzqPrVvPwwTWBwg",
-				"wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn",
-				"ttgJtRGJQctTZtZT",
-				"CrZsJsPPZsGzwwsLwLmpwMDw",
+				"2-4,6-8",
+				"2-3,4-5",
+				"5-7,7-9",
+				"2-8,3-7",
+				"6-6,4-6",
+				"2-6,4-8",
 			},
-			part_one_assert: 157,
-			part_two_assert: 70,
+			part_one_assert: 2,
+			part_two_assert: 4,
 		},
 	}
 
 	for _, test := range test_cases {
-		in := day03{
+		in := day04{
 			lines: test.input,
 		}
 		assert.Equal(t, test.part_one_assert, in.part_one())

@@ -11,7 +11,7 @@ func Test_All_Days(t *testing.T) {
 	test_cases := []struct {
 		day    int
 		part   int
-		assert int
+		assert interface{}
 	}{
 		{
 			day:    1,
@@ -32,6 +32,26 @@ func Test_All_Days(t *testing.T) {
 			day:    2,
 			part:   2,
 			assert: 11373,
+		},
+		{
+			day:    3,
+			part:   1,
+			assert: 7727,
+		},
+		{
+			day:    3,
+			part:   2,
+			assert: 2609,
+		},
+		{
+			day:    4,
+			part:   1,
+			assert: 475,
+		},
+		{
+			day:    4,
+			part:   2,
+			assert: 825,
 		},
 	}
 

@@ -1,7 +1,7 @@
 .PHONY: test tools vet fmt clean lint install
 
 test: 
-	go test -v ./...
+	go test ./... -count=1 -v
 
 tools:
 	go get -u github.com/stretchr/testify/assert
