@@ -92,6 +92,7 @@ func create_tree(lines []string) *Node {
 	return root
 }
 
+// TODO: WHAT IS THE BETTER WAY TO DO THIS?
 var file_sizes []int = []int{}
 
 func postorder_sums(root *Node) int {
@@ -131,7 +132,6 @@ func (input day07) part_one() int {
 func (input day07) part_two() int {
 	root := create_tree(input.lines)
 	total_size := postorder_sums(root)
-
 	min_size := 70000000
 
 	for _, size := range file_sizes {

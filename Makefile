@@ -4,7 +4,9 @@ test:
 	go test ./... -count=1 -v
 
 tools:
-	go get -u github.com/stretchr/testify/assert
+	go get -u github.com/stretchr/testify
+	go get -u github.com/davecgh/go-spew/spew
+	go get -u github.com/golang-collections/collections
 
 vet:
 	go vet ./...

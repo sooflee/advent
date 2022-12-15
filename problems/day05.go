@@ -89,13 +89,10 @@ func (input day05) part_one() string {
 
 	for _, instruction := range instructions {
 		for i := instruction.amount; i > 0; i-- {
-			// pop
 			n := len(stacks[instruction.from-1]) - 1
 			value := stacks[instruction.from-1][n]
 			stacks[instruction.from-1][n] = ""
 			stacks[instruction.from-1] = stacks[instruction.from-1][:n]
-
-			// push
 			stacks[instruction.to-1] = append(stacks[instruction.to-1], value)
 		}
 	}
@@ -112,20 +109,18 @@ func (input day05) part_two() string {
 
 	for _, instruction := range instructions {
 
-		// grab instruction.amount of things
-		to_grab := []string{}
+		// TODO: WHAT IS THE BETTER WAY TO DO THIS?
 
+		to_grab := []string{}
 		for i := instruction.amount; i > 0; i-- {
 			n := len(stacks[instruction.from-1]) - 1
 			value := stacks[instruction.from-1][n]
 			stacks[instruction.from-1][n] = ""
 			stacks[instruction.from-1] = stacks[instruction.from-1][:n]
-
 			to_grab = append(to_grab, value)
 		}
 
 		for i := instruction.amount - 1; i > -1; i-- {
-			// // push
 			stacks[instruction.to-1] = append(stacks[instruction.to-1], to_grab[i])
 		}
 	}
